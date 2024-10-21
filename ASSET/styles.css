@@ -1,0 +1,313 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Concert One", sans-serif;
+}
+
+:root {
+    --frist-color: #23221f;
+    --main-bg-color:#f7f7f6;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:fixed;
+    z-index: 3;
+
+    background-color: var(--main-bg-color);
+    box-shadow:0px 2px 4px #464446;
+    color: var(--frist-color);
+    padding-block: 5px;
+    padding-inline: 10px;
+    width: auto;
+    min-width: 85em;
+    top: 0;
+    
+}
+
+
+header nav ul  {
+    display: flex;
+    gap: 20px;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+    list-style: none;
+    transition: color 0.4s ease-in-out;
+}
+
+
+header nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color:var(--frist-color);
+    text-decoration: none;
+}
+
+
+
+header nav ul li:hover {
+    border-bottom: 2px var(--frist-color) solid;
+}
+
+
+/**Info institucional*/
+
+.info-insti {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding-top: 8em;
+    padding-inline: 10em;
+    padding-bottom: 10em;
+
+    color: var(--main-bg-color);
+
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info-insti .Text {
+    margin-block: 3em;
+}
+.info-insti .turistic-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40em;
+    height: 20em;
+    
+}
+/** Eslogans */
+#eslogan {
+    display: flex;
+    gap: 20px;
+    color: var(--frist-color);
+}
+#e-1 {
+    background-color: #0099ff;   
+    box-shadow: 4px 4px  var(--frist-color) ;
+    padding: 2px 4px;
+}
+#e-2 {
+    background-color: #ffe60d;
+    box-shadow: 4px 4px  var(--frist-color) ;
+    padding: 2px 4px;
+}
+#e-3 {
+    background-color: #79FB00;
+    box-shadow: 4px 4px  var(--frist-color) ;
+    padding: 2px 4px;
+}
+
+/** Catalogo */
+
+.Catalogo {
+    width: 100%;
+    height: 65em;
+    background-color: #f7f7f6;
+    color: var(--frist-color);
+}
+
+/*? Cards */
+
+.Catalogo .contenedor-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 2em;
+}
+.Catalogo .contenedor-cards .cards {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    width: 18em;
+    height: 26em;
+    background-color: #f7f7f6;
+    text-align: center;
+    border: 2px solid #464446;
+    border-radius: 15px;
+    box-shadow: 10px -10px 0 -3px #f7f7f6, 10px -10px  #464446, 20px -20px 0 -3px #f7f7f6, 20px -20px  #464446 ;
+    transition: all 1s;
+}
+
+.Catalogo .contenedor-cards .cards:hover {
+    top: 0px;
+    left: 0px;
+    box-shadow: none;
+    
+    transition:all 90ms;
+}
+
+.Catalogo .contenedor-cards .cards img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Catalogo .contenedor-cards .cards h3 {
+    font-weight:lighter;
+    padding-block: 5px;
+    font-size: 1.8rem;
+}
+.Catalogo .contenedor-cards .cards p {
+    text-align: left;
+    margin-inline: 2px;
+    
+}
+.Catalogo .contenedor-cards .cards .button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #23221f;
+    outline: 2px solid #fff;
+    padding-inline: 5px;
+    padding-block: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #464446;
+    transition: color 1s;
+}
+
+.Catalogo .contenedor-cards .cards .button:hover {
+    color: var(--frist-color);
+    background-color: #ffe70dd3;
+    word-spacing: 2px;
+    transition: width 1s;
+    
+}
+
+/** Blog's */
+.Blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-top: -3em;
+    height: 10em;
+    width: 100%;
+
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-bg-color) ;
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./images/Andariego-Jarabacoa.webp');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Blog h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/** FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    gap: 20px;
+    padding-block: 10px;
+    width: 100%;
+    height: 20em;
+}
+
+.contenedor-derecho {
+    display: flex;
+    gap: 15px;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.contenedor-derecho ul {
+    list-style: none;
+}
+.contenedor-derecho ul li {
+    margin-block: 5px;
+}
+.contenedor-derecho ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color:#23221fc8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contenedor-derecho ul li a:hover {
+    color: var(--frist-color);
+    transition: color 0.2s;
+}
+
+.contenedor-izquierdo {
+    width: 16em;
+}
+.contenedor-izquierdo .encabezado  {
+    display: inline-flex;
+    align-items: center;
+}
+
+.contenedor-izquierdo .iconos  {
+    display: inline-flex;
+    gap: 10px;
+}
+.contenedor-izquierdo .iconos svg {
+    width: 20px;
+    height: 20px;
+}
+.derechos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+}
+
+/* footer {
+    color: #f5f5f5;
+    background: #0575E6;
+     background: -webkit-linear-gradient(to bottom, #021B79, #0575E6);  
+     background: linear-gradient(to bottom, #021B79, #0575E6); 
+    display: flex; 
+    justify-content: center;
+     background: url(/ASSET/Imagenes/Seleccion/ja.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    height: 20em;
+}
+
+
+.container-footer {
+    padding-block: 5em;
+}
+
+.container-footer .info .links-info {
+    display: flex;
+    flex-direction: column;
+    text-align: row;
+    flex-wrap: wrap;
+    
+}
+.container-footer .info .links-info a{
+    color: #cbc5c5;
+    font-size: 20px;
+    vertical-align:baseline;
+}
+.container-footer .info .links-info i:hover{
+    color: #f5f5f5;
+} */
+
+
+/* icons */
+/* @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css') */
+
+@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css')

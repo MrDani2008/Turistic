@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    /* font-family: "Concert One", sans-serif; */
+    font-family: 'Patrick Hand', cursive;
+}
+:root {
+    --frist-color: #23221f;
+    --main-bg-color:#f7f7f6;
+    --body-bg-color:#e5e3e2;
+}
+body{
+    background-color: #e5e3e2;
+}
+a {
+    text-decoration: none;
+}
+
+.casa {
+    position: fixed;
+    display: flex;
+    left: 10px;
+    top: 10px;
+    background-color: #23221f;
+    width: 4em;
+    height: 4em;
+    border-radius: 100px;
+    color: var(--main-bg-color);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9;
+}
+
+.contenedor {
+    display: flex;
+    gap: 15px;
+    justify-content: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+    padding: 3em;
+}
+
+.contenedor .cards {
+    color: var(--main-bg-color);
+    font-size: 2.5rem;
+    
+
+    padding: 1em;
+    height: 8em;
+    border-radius: 15px;
+
+
+
+    background-position: center; 
+    background-size: cover;
+    background-repeat:no-repeat ;
+
+    transition: all 0.2s;
+}
+
+.contenedor .cards:hover {
+    transition: all 0.4s;
+    transform: scale(1.1);
+    z-index: 4;
+}
+
+.contenedor .cards h2 {
+    position: relative;
+    margin-bottom: 260px;
+    left: -15px;
+
+}
+
+.derechos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+}

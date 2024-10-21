@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+    color: var(--frist-color);
+}
+
+:root {
+    --frist-color: #23221f;
+    --main-bg-color:#f7f7f6;
+    --body-bg-color:#e5e3e2;
+    --amarillo:#ffe60d;
+    --rabius:15px;
+    --space:2em;
+    --h-size:3rem;
+    --h4-size:2rem;
+    --text-size:1.2rem;
+    --img-size:16em;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: rgb(97, 97, 185);
+    width: 50px;
+    height: 50px;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+body{
+    background-color: #E9E9E9;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+main {
+    background-color: var(--main-bg-color);
+    padding: 2em;
+    margin: 2em;
+    border-radius: var(--rabius);
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    font-size: 4rem;
+    text-align: left;
+    font-family: "Concert One", sans-serif;
+}
+h2 {
+    font-size: var(--h-size);
+    margin-top: var(--space);
+    font-family: "Concert One", sans-serif;
+}
+h4 {
+    font-size: var(--h4-size);
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+}
+.casa {
+    position: fixed;
+    display: flex;
+    left: 35em;
+    bottom: 0.5em;
+    background-color: var(--frist-color);
+    width: 8em;
+    height: 3em;
+    border-radius: 100px;
+    color: var(--main-bg-color);
+
+    text-decoration: none;
+    align-items:center;
+    justify-content: space-evenly;
+    text-align: center;
+    z-index: 9;
+}
+.casa span {
+    color: var(--main-bg-color);
+}
+
+.casa a:hover {
+    color: #f7f7f6d5;
+}
+/*! Presentacion */
+
+.presentacion {
+    display: flex;
+    gap: 20px;
+}
+
+.presentacion .img-uno img{
+    width: 43em;
+    border-radius: var(--rabius);
+}
+.presentacion span {
+    font-size: var(--h-size);
+    color: #0099ff;
+    
+}
+.presentacion a {
+    text-decoration: none;
+}
+
+/*! Actividades */
+
+.actividades {
+    margin-block: var(--space);
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4em;
+}
+.actividades .catalogo-acti {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: start;
+    text-decoration: none;
+    width: 100%;
+}
+.actividades .catalogo-acti img {   
+    width: var(--img-size);
+    border-radius: var(--rabius);
+
+}
+.actividades .catalogo-acti ul {
+    list-style: none;
+}
+
+.actividades .catalogo-acti a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color:var(--frist-color);
+    font-size: var(--text-size);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.actividades .catalogo-acti a:hover {
+    color: #0099ffe9;
+    transition: color 0.5s;
+}
+.actividades .catalogo-acti span {
+    color: var(--frist-color);
+    font-size: var(--text-size);
+}
+/*! H-R */
+.H-R {
+    display: inline-block;
+}
+
+/*! Hoteles */
+.H-R .hoteles {
+    margin-block: var(--space);
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+.H-R .hoteles .cards {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    align-items: start;
+    text-decoration: none;
+}
+.H-R .hoteles .cards .img-dos img {
+    width: var(--img-size);
+    border-radius: var(--rabius);
+}
+.H-R .hoteles .cards a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color:var(--frist-color);
+    font-size: var(--text-size);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.H-R .hoteles .cards a:hover {
+    color: #0099ffe9;
+    transition: color 0.5s;
+}
+
+.H-R .hoteles .cards span {
+    color: var(--frist-color);
+    font-size: var(--text-size);
+}
+
+/*! Restaurantes */
+.H-R .restaurantes {
+    margin-block: var(--space);
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4em;
+    top: 0;
+}
+.H-R .restaurantes .cards {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: start;
+    text-decoration: none;
+    width: 100%;
+}
+.H-R .restaurantes .cards .img-dos img {
+    width: var(--img-size);
+    border-radius: var(--rabius);
+}
+.H-R .restaurantes .cards a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color:var(--frist-color);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.H-R .restaurantes .cards a:hover {
+    color: #0099ffe9;
+    transition: color 0.5s;
+}
+.H-R .restaurantes .cards span {
+    color: var(--frist-color);
+    font-size: var(--text-size);
+}
+.H-R .restaurantes .cards .estrellas span{
+    color: var(--amarillo);
+    font-size: var(--text-size);
+}
+
+.derechos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }

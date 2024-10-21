@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    background-color: #f3f0ff;
+
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+main::after {
+    content: 'In progress';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: transparent;
+    -webkit-text-stroke: #fff 1px;
+    background-color: rgba(0, 0, 0, 0.537);
+
+    width: 100vw;
+    height: 100vh;
+    font-size: 7rem;
+    font-weight:bold;
+}
+
+img {
+    margin: auto;
+}
+
+@media screen {
+    main {
+        width: 100dvw;
+        height: 100dvh;
+    }
+    main::after {
+        font-size: 5rem;
+        width: 100dvw;
+        height: 100dvh;
+    }
+}
