@@ -26,7 +26,7 @@ header nav {
     color: var(--frist-color);
     padding-block: 5px;
     padding-inline: 10px;
-    width: auto;
+    width: 100%;
     min-width: 85em;
     top: 0;
     
