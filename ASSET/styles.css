@@ -86,8 +86,19 @@ header nav ul li:hover {
     justify-content: center;
     width: 40em;
     height: 20em;
+
+    animation: scroling 2s alternate infinite ;
     
 }
+@keyframes scroling {
+    0% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 /** Eslogans */
 #eslogan {
     display: flex;
