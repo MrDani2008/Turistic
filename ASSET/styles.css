@@ -72,7 +72,7 @@ header nav ul li:hover {
     padding-bottom: 10em;
 
     color: var(--main-bg-color);
-
+    
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
