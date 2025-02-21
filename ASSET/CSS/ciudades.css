@@ -3,7 +3,9 @@
     padding: 0;
     scroll-behavior: smooth;
     /* font-family: "Concert One", sans-serif; */
-    font-family: 'Patrick Hand', cursive;
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: "Lexend", serif;
+
 }
 :root {
     --frist-color: #23221f;
@@ -80,3 +82,4 @@ a {
     justify-content: center;
     padding-block: 10px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');

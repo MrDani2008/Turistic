@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: "Concert One", sans-serif;
+    /* font-family: "Concert One", sans-serif; */
+    font-family: "Lexend", serif;
 }
 
 :root {
@@ -166,7 +167,7 @@ header nav ul li:hover {
 }
 
 .Catalogo .contenedor-cards .cards h3 {
-    font-weight:lighter;
+    
     padding-block: 5px;
     font-size: 1.8rem;
 }
@@ -285,5 +286,4 @@ footer {
 
 
 /* icons */
-
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css')
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');

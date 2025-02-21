@@ -1,14 +1,15 @@
-@font-face {
+/* @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(https://example.com/MaterialIcons-Regular.eot); 
     src: local('Material Icons'),
       local('MaterialIcons-Regular'),
       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-  }
+  } 
+  */
 
   .material-icons {
     font-family: 'Material Icons';
@@ -96,3 +97,4 @@ body{
     
     margin-top: 2px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
