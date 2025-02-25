@@ -1,4 +1,2 @@
 # Turistic
-Una pagina web destinada al sector turistico
-
-Url pagina web: https://turistic.vercel.app/
+Una pagina web destinada al sector turistico de Republica Dominicana.
