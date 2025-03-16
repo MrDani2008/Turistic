@@ -135,22 +135,16 @@ header nav ul li:hover {
 
 .Catalogo .contenedor-cards {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    
     padding-block: 2em;
 }
 .Catalogo .contenedor-cards .cards {
     position: relative;
-    top: 20px;
-    left: -20px;
-    width: 18em;
+    display: flex;
+    width: 100vw;
     height: 26em;
-    background-color: var(--main-bg-color);
-    text-align: center;
-    border: 2px solid #464446;
-    border-radius: 15px;
-    box-shadow: 10px -10px 0 -3px var(--main-bg-color), 10px -10px  #464446, 20px -20px 0 -3px var(--main-bg-color), 20px -20px  #464446 ;
-    transition: all 1s;
+    background-color: var(--frist-color);
+    border-width: 5px;
 }
 
 .Catalogo .contenedor-cards .cards:hover {
