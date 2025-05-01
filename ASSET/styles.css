@@ -176,7 +176,7 @@ header nav ul li:hover {
 .Catalogo .contenedor-cards .cards .info-card h3 {
     font-weight: 900;
     text-align: left;
-    font-size: 5.5rem;
+    font-size: 2.5rem;
 }
 
 .Catalogo .contenedor-cards .cards .info-card p {
@@ -209,27 +209,34 @@ header nav ul li:hover {
 
 /** Blog's */
 .Blog {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
 
-    height: 10em;
+    height: auto;
     width: 100%;
+    padding-block: 4em;
+    text-align: center;
+    align-items: center;
+    color: var(--frist-color);
+    background-color: #f5f5f5;
+    
+    
+}
+.Blog article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    width: auto;
 
-    color: transparent;
-    -webkit-text-stroke: 1px var(--main-bg-color);
-    font-size: 5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('./images/Andariego-Jarabacoa.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-block: 2em;
+    
+    
 }
 
-.Blog h2 {
-    font-family: Arial, Helvetica, sans-serif;
+.Blog article video {
+    border-radius: 20px;
 }
+
+
 
 
 /** FOOTER */
@@ -300,7 +307,14 @@ footer {
     padding-block: 10px;
 }
 
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {  }
 
+/* Tablets (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {  }
+
+/* Laptops (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {  }
 
 /* icons */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
