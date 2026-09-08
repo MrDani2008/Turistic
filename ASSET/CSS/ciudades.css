@@ -9,6 +9,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
     /* font-family: "Concert One", sans-serif; */
     /* font-family: 'Patrick Hand', cursive; */
@@ -53,14 +54,28 @@ a {
     padding: 3em;
 }
 
+.contenedor > a {
+    display: flex;
+    flex: 1 1 calc((100% - 30px) / 3);
+    max-width: calc((100% - 30px) / 3);
+    min-width: 0;
+    text-decoration: none;
+}
+
 .contenedor .cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
     color: var(--main-bg-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
     
 
     padding: 1em;
-    height: 8em;
+    height: 12em;
     border-radius: 15px;
+    overflow: hidden;
 
 
 
@@ -78,9 +93,8 @@ a {
 }
 
 .contenedor .cards h2 {
-    position: relative;
-    margin-bottom: 260px;
-    left: -15px;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 
 }
 
@@ -89,5 +103,49 @@ a {
     align-items: center;
     justify-content: center;
     padding-block: 10px;
+}
+
+/* ===========================================
+   Breakpoints
+   mobile : 0 – 575px
+   tablet : 576px – 991px
+   desktop: 992px – 1199px
+   wide   : 1200px+
+   =========================================== */
+
+/* === Tablet (576px – 991px): 2 columnas === */
+@media (min-width: 576px) and (max-width: 991px) {
+    .contenedor > a {
+        flex: 1 1 calc((100% - 15px) / 2);
+        max-width: calc((100% - 15px) / 2);
+    }
+
+    .contenedor .cards {
+        height: 10em;
+        font-size: 1.8rem;
+    }
+}
+
+/* === Mobile (0px – 575px): 1 columna === */
+@media (max-width: 575px) {
+    .contenedor {
+        padding: 1.5em;
+        gap: 12px;
+    }
+
+    .contenedor > a {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .contenedor .cards {
+        height: 8em;
+        font-size: 1.4rem;
+    }
+
+    .casa {
+        width: 3.5em;
+        height: 3.5em;
+    }
 }
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
