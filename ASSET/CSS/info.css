@@ -118,6 +118,11 @@ a {
     color: var(--main-bg-color);
 }
 
+.casa li {
+    display: inline-flex;
+    gap: 10px;
+}
+
 .casa a:hover {
     color: #f7f7f6d5;
 }
@@ -426,4 +431,3 @@ a {
       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
   } */
-  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');

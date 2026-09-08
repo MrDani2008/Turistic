@@ -305,6 +305,25 @@ header nav .nav-menu li:hover {
     height: auto;
 }
 
+.Blog ul {
+    list-style: none;
+}
+
+.Blog h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.Blog h1 .material-symbols-outlined {
+    font-size: 3rem;
+    vertical-align: middle;
+}
+
+.Blog h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
 
 
 
@@ -357,6 +376,11 @@ footer {
 .contenedor-izquierdo .encabezado {
     display: inline-flex;
     align-items: center;
+}
+
+.contenedor-izquierdo .encabezado img {
+    width: 40px;
+    height: 40px;
 }
 
 .contenedor-izquierdo .iconos {
@@ -550,6 +574,20 @@ footer {
         padding-block: 2em;
     }
 
+    .Blog h1,
+    .Blog h1 .material-symbols-outlined {
+        font-size: 2rem;
+    }
+
+    .Blog h2 {
+        font-size: 1.4rem;
+    }
+
+    .derechos {
+        padding-inline: 10px;
+        text-align: center;
+    }
+
     /* Footer */
     footer {
         flex-direction: column;
@@ -578,4 +616,3 @@ footer {
 }
 
 /* icons */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
