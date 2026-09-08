@@ -1,6 +1,15 @@
+/* ===============================================
+   Breakpoints (convención común a todos los CSS)
+   mobile : 0 – 575px        -> @media (max-width: 575px)
+   tablet : 576px – 991px    -> @media (min-width: 576px) and (max-width: 991px)
+   desktop: 992px – 1199px   -> @media (min-width: 992px) and (max-width: 1199px)
+   wide   : 1200px+          -> estilos por defecto (sin media query)
+   =============================================== */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
     /* font-family: "Concert One", sans-serif; */
     font-family: "Lexend", serif;
@@ -28,13 +37,23 @@ header nav {
     padding-block: 5px;
     padding-inline: 10px;
     width: 100%;
-    min-width: 85em;
+    max-width: 100%;
+    box-sizing: border-box;
     top: 0;
-
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-header nav ul {
+.nav-logo {
+    height: 50px;
+    width: 50px;
+}
+
+header nav .nav-menu {
     display: flex;
     gap: 20px;
 
@@ -44,8 +63,7 @@ header nav ul {
     transition: color 0.4s ease-in-out;
 }
 
-
-header nav ul li a {
+header nav .nav-menu li a {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -54,10 +72,49 @@ header nav ul li a {
     text-decoration: none;
 }
 
-
-
-header nav ul li:hover {
+header nav .nav-menu li:hover {
     border-bottom: 2px var(--frist-color) solid;
+}
+
+/* === Toggle hamburguesa (CSS-only) === */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--frist-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease, top 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-toggle-icon {
+    position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle-icon::before {
+    top: -8px;
+}
+
+.nav-toggle-icon::after {
+    top: 8px;
 }
 
 
@@ -82,6 +139,10 @@ header nav ul li:hover {
     margin-block: 3em;
 }
 
+.info-insti .Text h1 {
+    font-size: 3rem;
+}
+
 .info-insti .turistic-logo {
     display: flex;
     align-items: center;
@@ -91,6 +152,11 @@ header nav ul li:hover {
 
     animation: scroling 2s alternate infinite;
 
+}
+
+.info-insti .turistic-logo img {
+    height: 25em;
+    width: 25em;
 }
 
 @keyframes scroling {
@@ -226,6 +292,7 @@ header nav ul li:hover {
     flex-wrap: wrap;
     
     width: auto;
+    gap: 15px;
 
     margin-block: 2em;
     
@@ -234,6 +301,8 @@ header nav ul li:hover {
 
 .Blog article video {
     border-radius: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -307,14 +376,206 @@ footer {
     padding-block: 10px;
 }
 
-/* Móviles (hasta 480px) */
-@media (max-width: 480px) {  }
+/* ===========================================
+   Breakpoints
+   mobile : 0 – 575px
+   tablet : 576px – 991px
+   desktop: 992px – 1199px
+   wide   : 1200px+
+   =========================================== */
 
-/* Tablets (481px a 768px) */
-@media (min-width: 481px) and (max-width: 768px) {  }
+/* === Mobile + Tablet: nav colapsado (hamburguesa) === */
+@media (max-width: 991px) {
+    header nav {
+        justify-content: space-between;
+        padding-inline: 15px;
+    }
 
-/* Laptops (769px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {  }
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--main-bg-color);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+        transition: max-height 0.35s ease-in-out;
+    }
+
+    header nav .nav-menu li {
+        border-bottom: 1px solid rgba(31, 32, 34, 0.1);
+    }
+
+    header nav .nav-menu li a {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        max-height: 300px;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label .nav-toggle-icon {
+        background-color: transparent;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label .nav-toggle-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label .nav-toggle-icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
+
+/* === Tablet (576px – 991px) === */
+@media (min-width: 576px) and (max-width: 991px) {
+    /* Hero */
+    .info-insti {
+        flex-direction: column;
+        text-align: center;
+        padding-inline: 4em;
+        padding-top: 8em;
+        padding-bottom: 6em;
+    }
+
+    .info-insti .Text {
+        margin-block: 1em;
+    }
+
+    .info-insti .Text h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-insti .turistic-logo {
+        margin-top: 2em;
+        width: 100%;
+        height: auto;
+    }
+
+    .info-insti .turistic-logo img {
+        height: 15em;
+        width: 15em;
+    }
+
+    /* Catálogo */
+    .Catalogo .contenedor-cards .cards {
+        height: 24em;
+    }
+
+    .Catalogo .contenedor-cards .cards .img-card,
+    .Catalogo .contenedor-cards .cards .info-card {
+        height: 24em;
+    }
+
+    .Catalogo .contenedor-cards .cards .info-card h3 {
+        font-size: 2rem;
+    }
+}
+
+/* === Mobile (0px – 575px) === */
+@media (max-width: 575px) {
+    /* Hero */
+    .info-insti {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6.5em;
+        padding-inline: 1.5em;
+        padding-bottom: 5em;
+    }
+
+    .info-insti .Text {
+        margin-block: 1em;
+    }
+
+    .info-insti .Text h1 {
+        font-size: 2.2rem;
+    }
+
+    .info-insti .turistic-logo {
+        margin-top: 2em;
+        width: 100%;
+        height: auto;
+    }
+
+    .info-insti .turistic-logo img {
+        height: 12em;
+        width: 12em;
+    }
+
+    /* Eslogans */
+    #eslogan {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Catálogo */
+    .Catalogo {
+        padding-block: 3em;
+    }
+
+    .Catalogo .contenedor-cards .cards {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Catalogo .contenedor-cards .cards .img-card {
+        width: 100%;
+        height: 15em;
+    }
+
+    .Catalogo .contenedor-cards .cards .info-card {
+        width: 100%;
+        height: auto;
+        margin-inline: 0;
+        padding-inline: 15px;
+    }
+
+    .Catalogo .contenedor-cards .cards .info-card h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Blog */
+    .Blog {
+        padding-block: 2em;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding-block: 2em;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .contenedor-izquierdo {
+        width: 100%;
+    }
+
+    .contenedor-izquierdo .encabezado,
+    .contenedor-izquierdo .iconos {
+        justify-content: center;
+    }
+
+    .contenedor-derecho {
+        justify-content: center;
+    }
+
+    .contenedor-derecho ul li a {
+        justify-content: center;
+    }
+}
 
 /* icons */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');

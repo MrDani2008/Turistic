@@ -11,6 +11,14 @@
   } 
   */
 
+  /* ===============================================
+   Breakpoints (convención común a todos los CSS)
+   mobile : 0 – 575px        -> @media (max-width: 575px)
+   tablet : 576px – 991px    -> @media (min-width: 576px) and (max-width: 991px)
+   desktop: 992px – 1199px   -> @media (min-width: 992px) and (max-width: 1199px)
+   wide   : 1200px+          -> estilos por defecto (sin media query)
+   =============================================== */
+
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;

@@ -22,11 +22,15 @@
 <body>
     <header>
         <nav>
-            <div style="display: flex;align-items: center;">
-                <img src="./ASSET/images/turistic.png" alt="" style="height: 50px; width: 50px;">
+            <div class="nav-brand">
+                <img src="./ASSET/images/turistic.png" alt="Turistic logo" class="nav-logo">
                 <p>Turistic</p>
             </div>
-            <ul>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+                <span class="nav-toggle-icon"></span>
+            </label>
+            <ul class="nav-menu">
                 <li><a href="#Us"><span class="material-symbols-outlined">group</span><span class="a">Quiénes
                             somos</span></a></li>
                 <li><a href="#Catalogo"><span class="material-symbols-outlined">menu</span><span
@@ -39,7 +43,7 @@
     <main>
         <section class="info-insti" style="background-image: url(./ASSET/images/Remote-Island-1-scaled.webp);" id="Us">
             <div class="Text">
-                <h1 style="font-size: 3rem;">Turistic</h1>
+                <h1>Turistic</h1>
                 <p>
                     Turistic es una plataforma apasionada por explorar y compartir la incomparable
                     belleza de nuestra querida República Dominicana. Nos dedicamos a recopilar y destacar
@@ -54,7 +58,7 @@
                         id="e-3">Diviertete</span></div>
             </div>
             <div class="turistic-logo">
-                <img src="./ASSET/images/turistic.png" alt="turistic-logo" style="height: 25em; width: 25em; ">
+                <img src="./ASSET/images/turistic.png" alt="Turistic logo">
             </div>
 
             <!-- !Catalogo -->
@@ -137,19 +141,19 @@
             <article>
                 
                 <div>
-                    <video width="200" height="360" controls autoplay  muted >
+                    <video controls autoplay muted>
                         <source src="./ASSET/videos/77ae4d97-fed9-439b-acee-87a44fe7f9d3.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                       </video>
-                      <video width="640" height="360" controls autoplay  muted>
+                      <video controls autoplay muted>
                         <source src="./ASSET/videos/Viene.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                       </video>
-                      <video width="640" height="360" controls autoplay  muted>
+                      <video controls autoplay muted>
                         <source src="./ASSET/videos/Hoy.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                       </video>
-                      <video width="200" height="360" controls autoplay  muted >
+                      <video controls autoplay muted>
                         <source src="./ASSET/videos/Caf.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                       </video>
