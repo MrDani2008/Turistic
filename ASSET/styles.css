@@ -510,8 +510,8 @@ footer {
 @media (max-width: 575px) {
     /* Hero */
     .info-insti {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column-reverse;
+        text-align:center;
         padding-top: 6.5em;
         padding-inline: 1.5em;
         padding-bottom: 5em;
@@ -552,7 +552,9 @@ footer {
         flex-direction: column;
         height: auto;
     }
-
+    .Catalogo .contenedor-cards #playas  {
+        flex-direction: column-reverse;
+    }
     .Catalogo .contenedor-cards .cards .img-card {
         width: 100%;
         height: 15em;
