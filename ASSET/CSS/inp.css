@@ -1,3 +1,11 @@
+/* ===============================================
+   Breakpoints (convención común a todos los CSS)
+   mobile : 0 – 575px        -> @media (max-width: 575px)
+   tablet : 576px – 991px    -> @media (min-width: 576px) and (max-width: 991px)
+   desktop: 992px – 1199px   -> @media (min-width: 992px) and (max-width: 1199px)
+   wide   : 1200px+          -> estilos por defecto (sin media query)
+   =============================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +18,15 @@ main {
 
     width: 100vw;
     height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
 }
 
 main::after {
     content: 'In progress';
     position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,22 +37,31 @@ main::after {
 
     width: 100vw;
     height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     font-size: 7rem;
     font-weight:bold;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
 }
 
 img {
     margin: auto;
+    max-width: 100%;
 }
 
-@media screen {
-    main {
-        width: 100dvw;
-        height: 100dvh;
-    }
+/* Tableta: 576 – 991px */
+@media (min-width: 576px) and (max-width: 991px) {
     main::after {
-        font-size: 5rem;
-        width: 100dvw;
-        height: 100dvh;
+        font-size: 4rem;
+    }
+}
+
+/* Mobile: 0 – 575px */
+@media (max-width: 575px) {
+    main::after {
+        font-size: 2.5rem;
+        padding-inline: 10px;
     }
 }

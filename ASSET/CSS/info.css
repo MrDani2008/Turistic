@@ -1,6 +1,15 @@
+/* ===============================================
+   Breakpoints (convención común a todos los CSS)
+   mobile : 0 – 575px        -> @media (max-width: 575px)
+   tablet : 576px – 991px    -> @media (min-width: 576px) and (max-width: 991px)
+   desktop: 992px – 1199px   -> @media (min-width: 992px) and (max-width: 1199px)
+   wide   : 1200px+          -> estilos por defecto (sin media query)
+   =============================================== */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
     
     color: var(--frist-color);
@@ -58,8 +67,9 @@ html,body{
 main {
     background-color: var(--main-bg-color);
     width: 90%;
+    max-width: 1100px;
     padding: 2em;
-    margin: 2em;
+    margin: 2em auto;
     border-radius: var(--rabius);
     display: flex;
     flex-wrap: wrap;
@@ -103,11 +113,15 @@ a {
     text-align: center;
     z-index: 9;
 }
+
 .casa span {
     color: var(--main-bg-color);
 }
 
-
+.casa li {
+    display: inline-flex;
+    gap: 10px;
+}
 
 .casa a:hover {
     color: #f7f7f6d5;
@@ -119,8 +133,19 @@ a {
     gap: 20px;
 }
 
+.presentacion .img-uno {
+    flex: 1 1 45%;
+    min-width: 0;
+}
+
+.presentacion .texto-uno {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
 .presentacion .img-uno img{
-    width: 43em;
+    width: 100%;
+    height: auto;
     border-radius: var(--rabius);
 }
 .presentacion span {
@@ -163,6 +188,8 @@ a {
 }
 .actividades .catalogo-acti img {   
     width: var(--img-size);
+    max-width: 100%;
+    height: auto;
     border-radius: var(--rabius);
 
 }
@@ -222,6 +249,8 @@ a {
 }
 .hoteles .cards .img-dos img {
     width: var(--img-size);
+    max-width: 100%;
+    height: auto;
     border-radius: var(--rabius);
 }
 .hoteles .cards a {
@@ -269,6 +298,8 @@ a {
 }
 .restaurantes .cards .img-dos img {
     width: var(--img-size);
+    max-width: 100%;
+    height: auto;
     border-radius: var(--rabius);
 }
 .restaurantes .cards a {
@@ -300,6 +331,95 @@ a {
     padding-block: 10px;
 }
 
+/* ===========================================
+   Breakpoints
+   mobile : 0 – 575px
+   tablet : 576px – 991px
+   desktop: 992px – 1199px
+   wide   : 1200px+
+   =========================================== */
+
+/* === Desktop (992px – 1199px) === */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .presentacion {
+        gap: 15px;
+    }
+}
+
+/* === Tablet (576px – 991px) === */
+@media (min-width: 576px) and (max-width: 991px) {
+    main {
+        width: 92%;
+        padding: 1.5em;
+        margin: 1.5em auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* === Mobile (0px – 575px) === */
+@media (max-width: 575px) {
+    :root {
+        --img-size: 14em;
+        --h-size: 2.2rem;
+        --h4-size: 1.6rem;
+        --text-size: 1rem;
+        --space: 1.5em;
+    }
+
+    main {
+        width: 95%;
+        padding: 1em;
+        margin: 1em auto;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentacion .img-uno,
+    .presentacion .texto-uno {
+        flex: 1 1 100%;
+    }
+
+    .presentacion .img-uno img {
+        width: 100%;
+    }
+
+    .actividades {
+        gap: 1.5em;
+    }
+
+    .actividades .catalogo-acti,
+    .hoteles .cards,
+    .restaurantes .cards {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .actividades .catalogo-acti a,
+    .hoteles .cards a,
+    .restaurantes .cards a {
+        justify-content: center;
+    }
+
+    .casa {
+        top: auto;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+}
+
 /* @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -311,4 +431,3 @@ a {
       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
   } */
-  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
